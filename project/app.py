@@ -1,5 +1,11 @@
 from argparse import ArgumentParser
 
+from pathlib import Path
+import sys
+import streamlit as st
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 import streamlit as st
 from interface.streamlit_utils import get_img_tag
 from interface.train import render_train_interface
