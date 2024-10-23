@@ -152,7 +152,10 @@ class Sigmoid(Function):
         """Docstring"""
         (s,) = ctx.saved_values
         one = minitorch.Tensor.make([1.0], (1,), backend=s.backend)
-        return s.f.mul_zip(s.f.mul_zip(s, s.f.add_zip(one, s.f.neg_map(s))), grad_output)
+        return s.f.mul_zip(
+            s.f.mul_zip(s, s.f.add_zip(one, s.f.neg_map(s))), grad_output
+        )
+
 
 class ReLU(Function):
     @staticmethod
@@ -166,6 +169,7 @@ class ReLU(Function):
         """Docstring"""
         (t1,) = ctx.saved_values
         return t1.f.relu_back_zip(t1, grad_output)
+
 
 class Log(Function):
     @staticmethod

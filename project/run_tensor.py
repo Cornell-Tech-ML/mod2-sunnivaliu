@@ -6,11 +6,13 @@ Be sure you have minitorch installed in you Virtual Env.
 import minitorch
 import numpy as np
 
+
 # Use this function to make a random parameter in
 # your module.
 def RParam(*shape):
     r = 2 * (minitorch.rand(shape) - 0.5)
     return minitorch.Parameter(r)
+
 
 # TODO: Implement for Task 2.5.
 
@@ -56,6 +58,7 @@ class Linear(minitorch.Module):
         # Add the bias
         output = reshaped_sum + self.bias.value.view(self.out_size)
         return output
+
 
 def default_log_fn(epoch, total_loss, correct, losses):
     print("Epoch ", epoch, " loss ", total_loss, "correct", correct)

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import operator
 import random
 from typing import Iterable, Optional, Sequence, Tuple, Union
 
@@ -120,7 +121,7 @@ def shape_broadcast(shape1: UserShape, shape2: UserShape) -> UserShape:
     # TODO: Implement for Task 2.2.
     new_shape = ()
     large, small = (shape1, shape2) if len(shape1) >= len(shape2) else (shape2, shape1)
-    small = (1,) * (len(large) - len(small)) + small
+    small = operator.add((1,) * (len(large) - len(small)), small)
     for i in range(len(large)):
         l, s = large[i], small[i]
         if l == s:

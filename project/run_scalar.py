@@ -8,13 +8,14 @@ import random
 import minitorch
 import numpy as np
 
+
 class Network(minitorch.Module):
     def __init__(self, hidden_layers):
         super().__init__()
         # TODO: Implement for Task 1.5
         self.layer1 = Linear(2, hidden_layers)
-        self.layer2 = Linear(hidden_layers,hidden_layers)
-        self.layer3 = Linear(hidden_layers,1)
+        self.layer2 = Linear(hidden_layers, hidden_layers)
+        self.layer3 = Linear(hidden_layers, 1)
 
     def forward(self, x):
         middle = [h.relu() for h in self.layer1.forward(x)]
@@ -35,7 +36,8 @@ class Linear(minitorch.Module):
             for j in range(out_size):
                 self.weights[i].append(
                     self.add_parameter(
-                        f"weight_{i}_{j}", minitorch.Scalar(xavier_weights[i * out_size + j])
+                        f"weight_{i}_{j}",
+                        minitorch.Scalar(xavier_weights[i * out_size + j]),
                     )
                 )
         for j in range(out_size):
@@ -55,7 +57,7 @@ class Linear(minitorch.Module):
         xavier_weights = random_weights - actual_mean
 
         # Calculate desired variance
-        desired_variance = 2/ (fan_in + fan_out)
+        desired_variance = 2 / (fan_in + fan_out)
 
         # Adjust the variance to be the desired variance
         actual_variance = np.var(xavier_weights)
@@ -66,13 +68,13 @@ class Linear(minitorch.Module):
 
     def forward(self, inputs):
         # TODO: Implement for Task 1.5.
-        '''
+        """
         y = x*w+b
         x is the input vector (with size in_size),
         W is the weight matrix (with shape [in_size, out_size]),
         b is the bias vector (with size out_size),
         y is the output vector (with size out_size).
-        '''
+        """
         out = [b.value for b in self.bias]
         for i, x in enumerate(inputs):
             for j in range(len(self.bias)):

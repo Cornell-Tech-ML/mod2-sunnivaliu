@@ -3,6 +3,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 import sys
 import streamlit as st
+
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st
