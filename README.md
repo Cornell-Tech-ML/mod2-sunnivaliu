@@ -10,20 +10,20 @@
 
 
 
-* Simple Dataset:  (Number of point = 50, Hidden Layer = 2, RATE = 0.5, EPOCH = 500)
+* Simple Dataset:  (Number of point = 50, Hidden Layer = 2, RATE = 0.5, EPOCH = 1000)
 
 <img src="simple.png" width="75%">
 
-* Diag Dataset:  (Number of point = 50, Hidden Layer = 2, RATE = 0.5, EPOCH = 500)
+* Diag Dataset:  (Number of point = 50, Hidden Layer = 2, RATE = 0.5, EPOCH = 1000)
 
 <img src="diag.png" width="75%">
 
 
-* Split Dataset:  (Number of point = 100, Hidden Layer = 10, RATE = 0.1, EPOCH = 1500)
+* Split Dataset:  (Number of point = 50, Hidden Layer = 10, RATE = 0.1, EPOCH = 1000)
 
 <img src="split.png" width="75%">
 
-* Xor Dataset: (Number of point = 50, Hidden Layer = 10, RATE = 0.5, EPOCH = 500)
+* Xor Dataset: (Number of point = 50, Hidden Layer = 10, RATE = 0.5, EPOCH = 250)
 
 <img src="xor.png" width="75%">
 
