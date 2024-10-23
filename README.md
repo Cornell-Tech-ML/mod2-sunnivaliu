@@ -8,6 +8,26 @@
 
 * Overview: https://minitorch.github.io/module2/module2/
 
+
+
+* Simple Dataset:  (Number of point = 50, Hidden Layer = 2, RATE = 0.5, EPOCH = 500)
+
+<img src="simple.png" width="75%">
+
+* Diag Dataset:  (Number of point = 50, Hidden Layer = 2, RATE = 0.5, EPOCH = 500)
+
+<img src="diag.png" width="75%">
+
+
+* Split Dataset:  (Number of point = 100, Hidden Layer = 10, RATE = 0.1, EPOCH = 1500)
+
+<img src="split.png" width="75%">
+
+* Xor Dataset: (Number of point = 50, Hidden Layer = 10, RATE = 0.5, EPOCH = 500)
+
+<img src="xor.png" width="75%">
+
+
 This assignment requires the following files from the previous assignments. You can get these by running
 
 ```bash
